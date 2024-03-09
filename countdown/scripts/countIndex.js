@@ -5,7 +5,11 @@ const canvasC = document.getElementById('c');
 
 const config = {
   birthdate: 'Mar 8, 2024',
+<<<<<<< HEAD
   name: 'Tobi bestie'
+=======
+  name: 'Tobi Best'
+>>>>>>> 7549822df15167e391f9c50e01e242441ed30ed8
 };
 
 function hideEverything() {
@@ -505,9 +509,9 @@ x = setInterval(function() {
     canvasC.style.display = 'initial';
     confetti.clear();
 
-    // Redirect to another page after a delay (e.g., 100 seconds)
+    // Redirect to another page after a delay (e.g., 20 seconds)
     setTimeout(() => {
       window.location.href = '../index.html';
-    }, 100000);
+    }, 20000);
    }
 }, second);
