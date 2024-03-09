@@ -5,11 +5,8 @@ const canvasC = document.getElementById('c');
 
 const config = {
   birthdate: 'Mar 8, 2024',
-<<<<<<< HEAD
-  name: 'Tobi bestie'
-=======
-  name: 'Tobi Best'
->>>>>>> 7549822df15167e391f9c50e01e242441ed30ed8
+  name: 'Tobi Bestie'
+
 };
 
 function hideEverything() {
