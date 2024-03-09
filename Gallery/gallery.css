@@ -1,15 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+}
+
+.navbar {
+  display: flex;
+  flex: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 0%;
+  background-image: linear-gradient(rgba(255, 0, 255, 0.6), rgba(255, 255, 255, 0.8)), url(../img/glasHapp.jpg);
+  background-position: center;
+ z-index: 100;
+}
+.logo {
+  width: 77px;
+}
+.nav-items {
+  flex: 1;
+  text-align: right;
+}
+.nav-items li {
+  list-style: none;
+  display: inline-block;
+  padding: 3%;
+}
+.nav-items li a {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: black;
+}
+.nav-items li::before {
+  content: '';
+  width: 0;
+  background-color:  #3c00ff;
+  display: block;
+  align-items: center;
+  margin: auto;
+  height: 2px;
+  transition: 0.7s;
+}
+.nav-items li:hover::before {
+  width: 60%; 
+}
+
+.burger {
+  color: #E6E6FA;
+  font-size: 22px;
+  background-color: rgba(31, 31, 31, 0.2);
+  padding: 4px 7px;
+  border-radius: 50px;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 20%;
 }
+
 
 h1 {
   text-align: center;
@@ -24,4 +86,48 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Styles for the upload button */
+#file-input {
+  display: block;
+  margin: 20px auto; /* Centers the button horizontally */
+  padding: 10px 20px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+#file-input:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Styles for other buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Adjust spacing between buttons */
+}
+
+.button:hover {
+  background-color: #218838; /* Button background color on hover */
+}
+h5 {
+  text-align: center;
+}
+footer {
+  background: linear-gradient(rgba(255, 0, 255, 0.6), rgba(255, 255, 255, 0.8));
+  text-align: center;
 }

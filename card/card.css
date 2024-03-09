@@ -108,3 +108,59 @@ body{
 /* Define breakpoints for different screen sizes */
 
 /* Additional styles for smaller screens if needed */
+/* Default styles */
+
+/* Default styles */
+/* Your existing styles */
+
+/* Add media query for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex-direction: column; /* Arrange items vertically */
+      align-items: center; /* Center items horizontally */
+      height: auto; /* Allow container to adjust height based on content */
+    }
+    .card {
+        order: 1; /* Move cards to the top */
+        margin-bottom: 20px; /* Add space between cards and blocks */
+        top: 70%;
+        left: 10%;
+        right: 10%;
+        position: relative;
+        height: 100%;
+    }
+
+    .card img {
+        width: 7em;
+    }
+
+    .outside,.inside{
+        width: 70%;
+        height: 100%;
+        border-radius: 20px;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .outside h1{
+        font-size: 2rem;
+    }
+    .inside {
+        width: auto;
+        font-size: 14px;
+        align-items: center;
+        margin-right: 20%;
+        left: 90%;
+    }
+  
+    .block {
+      order: 2; /* Move block below cards */
+      margin-top: 20px; /* Add space between cards and blocks */
+      position: relative;
+      right: 60%;
+    }
+  }
+  
