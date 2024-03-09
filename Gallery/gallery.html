@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Beautiful Gallery</title>
     <link rel="stylesheet" href="gallery.css">
-    <link rel="icon" href="img/OIF7.png" type="img/x-icon">
-    <title>Galllery</title>
-  </head>
-  <body>
-    <div class="gallery">
-      <?php
-      // Display existing images
-      $images = glob("uploads/*.{jpg,jpeg,png,gif}", GLOB_BRACE);
-      foreach ($images as $image) {
-          echo "<img src='$image' alt='Image'>";
-      }
-      ?>
-  </div>
-  
-  <form action="upload.php" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*" required>
-      <button type="submit">Upload Image</button>
-  </form>
-    <script src="index.js"></script>
-  </body>
+</head>
+<body>
+    <div class="container">
+        <h1>Beautiful Gallery</h1>
+        <div id="image-gallery"></div>
+        <input type="file" id="file-input" accept="image/*">
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
