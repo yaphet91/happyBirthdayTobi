@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  height: 100vh;
+  width:  100%;
+  background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
+  url(img/New_era.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 0 3%;
+}
+.navbar {
+  display: flex;
+  flex: 1;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 0%;
+}
+.logo {
+  width: 77px;
+}
+.nav-items {
+  flex: 1;
+  text-align: right;
+}
+.nav-items li {
+  list-style: none;
+  display: inline-block;
+  padding: 3%;
+}
+.nav-items li a {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: gold;
+}
+.nav-items li::before {
+  content: '';
+  width: 0;
+  background-color:  #98FF98;
+  display: block;
+  align-items: center;
+  margin: auto;
+  height: 2px;
+  transition: 0.7s;
+}
+.nav-items li:hover::before {
+  width: 60%; 
+}
+
+.burger {
+  color: #E6E6FA;
+  font-size: 22px;
+  background-color: rgba(31, 31, 31, 0.2);
+  padding: 4px 7px;
+  border-radius: 50px;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  width: 100%;
+  align-items: center;
+}
+.col {
+  flex-basis: 50%;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #98FF98;
+  font-size: 400%;
+}
+p {
+  font-family: "Playfair Display", serif;
+  color: pink;
+  text-shadow: black;
+  font-size: 120%;
+  padding-left: 2%;
+}
+button {
+  width: 180px;
+  padding: 12px 0px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  color: #ff9898;
+  background-color: #fff;
+  outline: none;
+  font-weight: 900;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+/* cards css */
+.card{
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 10px 15px;
+  padding: 15px 25px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card1 {
+  background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
+  url(img/\Silhouette_of_Infinity.jpg);
+}
+.card2 {
+  background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
+  url(img/extraCirukarColorfulpic.jpg);
+}
+.card3 {
+  background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
+  url(img/tiositting.jpg);
+}
+.card4 {
+  background-image: linear-gradient(rgba(255, 129, 142, 0.57), rgba(103, 0, 19, 0.2)),
+  url(img/galleryStaring.jpg);
+  color: rgb(255, 192, 203);
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h5 {
+  color: #fff;
+  text-shadow: 0px 0px 10px gold;
+}
+.card p {
+  text-shadow: 0px 0px 15px gold;
+  font-size: 12px;
+  text-align: center
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+  .card p {
+    font-size: 9px;
+    margin: 7px 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+  .card p {
+    font-size: 9px;
+    margin: 7px 10px;
+  }
+} 
+/*/font-family: "Playfair Display", serif;
+font-family: "Pacifico", cursive; 
+#E6E6FA levante */
