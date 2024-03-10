@@ -11,8 +11,8 @@
 .background {
   height: 75vh;
   width: 100%;
-  background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
-  url(img/pexels-pix.jpg);
+  background-image: linear-gradient(rgba(2 10 1/77%), rgba(2 10 10/20%)),
+  url(../img/tiositting.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -58,12 +58,17 @@
 }
 .btn{
   padding: 10px 30px;
-  background-color: #15cece;
-  color: white;
+  background-color: rgb(30, 108, 254);
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 23px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.btn a {
+  color: whitesmoke;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #f90505;
@@ -77,7 +82,7 @@
   color: white;
   font-size: 33px;
 }
-/*____main8*/
+/*_________main__*/
 .main {
  width: 90%;
  position: absolute;
@@ -139,9 +144,13 @@
   background-color: #15cece;
 }
 .box:nth-child(even){
-  background-color: #f60086;
+  background-color: #ff527b;
 }
-/*_____service*/
+
+.row .box{
+  border-radius: 50px;
+}
+/*_____about*/
 .sec {
   width: 90%;
   margin: auto;
@@ -168,7 +177,7 @@
 .img img {
   width: 30%;
 }
-/*_------plces*/
+/*_------services*/
 .row1 {
   padding-top: 3%;
 }
@@ -200,12 +209,11 @@
 }
 /*_______discount*/
 .dis {
-  background-image: linear-gradient(rgba(2 10 10/67%) ,  rgba(2 10 10/30%)),
-  url(img/dark-heart.png);
+  background-image: linear-gradient(rgba(2 10 10/67%) ,  rgba(2 10 50/30%)),
+  url(../img/2024-03-09a10.27.59_fc823afa.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: goldenrod;
   text-align: center;
   padding: 4% 0;
   margin: 2% 0;
@@ -213,7 +221,7 @@
 .dis h2{
   margin-bottom: 2.4%;
 }
-/*________trve;d*/
+/*________trvelers*/
 .box2{
   padding: 2%;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 12px;
@@ -231,40 +239,38 @@
   margin-top: 2%;
   width: 30%;
   border-radius: 50%;
+  object-fit: cover;
 }
 .s-img{
   width: 20%;
 }
 /*______subscribe*/
 .sub {
-  background-image: linear-gradient(rgba(2 10 10/57%) ,  rgba(2 10 10/20%)),
-  url(img/yard.jpg);
+  background-image: linear-gradient(rgba(241, 73, 129, 0.57) ,  rgba(9, 95, 255, 0.4)),
+  url(../img/galleryStaring.jpg);
 }
 .sub h1 {
   margin-bottom: 2%;
 }
+
+
 /*________sponsors*/
-.row2{
-  flex-wrap: wrap;
-  margin-top: 5%;
-  justify-content: space-evenly;
-}
-.row2 div {
-  flex-basis: 33%;
-  padding: 3%;
-}
 footer{
   text-align: center;
-  color: white;
-  background-color: #f60086;
+  color: #F3D9D6;
+  background-color: #fcb69f;
   padding: 12px;
   font-style: italic;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 /*_______responsive*/
 @media only screen and (max-width: 1147px) {
   .img img {
     width: 41%;
+  }
+  .ser .row {
+    border-radius: 20px;
   }
 }
 @media only screen and (max-width: 852px) {
@@ -273,7 +279,7 @@ footer{
     flex-direction: column;
     transition: all 0.9s ease-out;
     align-items: center;
-    background-color: #333;
+    background: linear-gradient( rgba(9, 95, 255, 0.5)  ,rgba(241, 73, 129, 0.5)) #333;
     z-index: 1;
     justify-content: space-evenly;
   }
@@ -284,6 +290,7 @@ footer{
   .nav-items li{
     margin-left: 0;
     padding: 4% 0;
+    white-space: nowrap;
   }
   .logo {
     padding-bottom: 8%;
@@ -321,14 +328,24 @@ footer{
   .img {
     padding-top: 3%;
   }
-  .row2 div {
-    margin-bottom: 2em;
-  }
+
   .search input {
     padding: 20px 7px;
   }
   .btn1 {
     padding: 15px 7px;
   }
+
+  .box {
+    border-radius: 20px;
+  }
   
+}
+/*---------later added--------------*/
+.main h1 {
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
