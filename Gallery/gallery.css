@@ -72,12 +72,13 @@ body {
   padding-top: 20%;
 }
 
+/*------------------main-content----------------*/
 
 h1 {
   text-align: center;
 }
 
-#image-gallery {
+#media-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
@@ -87,6 +88,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* CSS to style the video element */
+video {
+  max-width: 100%; /* Ensure the video doesn't exceed its container's width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure proper block-level rendering */
+  margin: 0 auto; /* Center the video horizontally */
+}
+
 
 /* Styles for the upload button */
 #file-input {

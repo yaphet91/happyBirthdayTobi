@@ -258,7 +258,7 @@
 footer{
   text-align: center;
   color: #F3D9D6;
-  background-color: #fcb69f;
+  background-color: #f90505;
   padding: 12px;
   font-style: italic;
   letter-spacing: 1px;
@@ -348,4 +348,24 @@ footer{
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+video {
+  width: 100%; /* Set video width to 100% of its container */
+  height: auto; /* Automatically adjust height based on aspect ratio */
+  display: block; /* Make the video a block-level element */
+  margin: 0 auto; /* Center the video horizontally */
+  max-width: 800px; /* Set maximum width for the video */
+  border: 1px solid #da0808; /* Add a border around the video */
+}
+
+.heartfelt p {
+  padding: 0.2em;
+  margin: 0;
+}
+.message {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

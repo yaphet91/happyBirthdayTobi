@@ -1,5 +1,5 @@
-// Default images (local paths)
-const defaultImages = [
+// Default media (local paths)
+const defaultMedia = [
     '../img/WhatsA4.21_9424a526.jpg',
     '../img/WhatsA6c20e16d.jpg',
     '../img/WhatsAp.05.52_25a938c3.jpg',
@@ -14,54 +14,82 @@ const defaultImages = [
     '../img/sibil.jpg',
     '../img/sibli.jpg',
     '../img/sibloi.jpg',
-    '../img/tioCaffee.jpg'
-    // Add more default image paths here if needed
+    '../img/tioCaffee.jpg',
+    // Add default video paths here if needed
+    '../BdTio/img/VID-20240215-WA0001.mp4',
 ];
 
-// Function to add images to the gallery
-function addImagesToGallery(imageUrls) {
-    const gallery = document.getElementById('image-gallery');
-    imageUrls.forEach(imageUrl => {
-        const img = document.createElement('img');
-        img.src = imageUrl;
-        gallery.appendChild(img);
+
+// Function to add media to the gallery
+function addMediaToGallery(mediaUrls) {
+    const gallery = document.getElementById('media-gallery');
+    mediaUrls.forEach(mediaUrl => {
+        const media = typeof mediaUrl === 'string' ? createMediaElement(mediaUrl) : createMediaElementFromBlob(mediaUrl);
+        gallery.appendChild(media);
     });
 }
 
-// Add default images to the gallery
-addImagesToGallery(defaultImages);
+// Function to create media element from URL
+function createMediaElement(url) {
+    const element = url.endsWith('.mp4') ? 'video' : 'img';
+    const media = document.createElement(element);
+    media.src = url;
+    if (element === 'video') {
+        media.controls = true; // Add controls for videos
+    }
+    return media;
+}
 
-// Event listener for adding new images
+// Function to create media element from Blob
+function createMediaElementFromBlob(blob) {
+    const reader = new FileReader();
+    const media = document.createElement('video');
+    reader.onload = function(event) {
+        media.src = event.target.result;
+        media.controls = true; // Add controls for videos
+    };
+    reader.readAsDataURL(blob);
+    return media;
+}
+
+
+// Add default media to the gallery
+addMediaToGallery(defaultMedia);
+
+// Event listener for adding new media
 document.getElementById('file-input').addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function() {
-            const imageUrl = reader.result;
-            addImageToGallery(imageUrl);
+            const mediaUrl = reader.result;
+            addSingleMediaToGallery(mediaUrl); // Use the correct function here
         }
         reader.readAsDataURL(file);
     }
 });
 
-// Function to add a single image to the gallery
-function addImageToGallery(imageUrl) {
-    const gallery = document.getElementById('image-gallery');
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    gallery.appendChild(img);
 
-    // Save the image URL to local storage
-    const images = JSON.parse(localStorage.getItem('userImages')) || [];
-    images.push(imageUrl);
-    localStorage.setItem('userImages', JSON.stringify(images));
+// Function to add a single media to the gallery
+function addSingleMediaToGallery(mediaUrl) {
+    const gallery = document.getElementById('media-gallery');
+    const element = mediaUrl.endsWith('.mp4') ? 'video' : 'img';
+    const media = document.createElement(element);
+    media.src = mediaUrl;
+    media.controls = true; // Add controls for videos
+    gallery.appendChild(media);
+
+    // Save the media URL to local storage
+    const mediaList = JSON.parse(localStorage.getItem('userMedia')) || [];
+    mediaList.push(mediaUrl);
+    localStorage.setItem('userMedia', JSON.stringify(mediaList));
 }
 
-// Function to load user's images from local storage
-function loadUserImages() {
-    const images = JSON.parse(localStorage.getItem('userImages')) || [];
-    addImagesToGallery(images);
+// Function to load user's media from local storage
+function loadUserMedia() {
+    const mediaList = JSON.parse(localStorage.getItem('userMedia')) || [];
+    addMediaToGallery(mediaList);
 }
 
-// Load user's images when the page loads
-loadUserImages();
+// Load user's media when the page loads
+loadUserMedia();
