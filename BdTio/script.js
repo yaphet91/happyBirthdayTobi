@@ -54,7 +54,7 @@ document.getElementById('guestbookForm').addEventListener('submit', function(eve
   let message = document.getElementById('message').value;
   addMessage(name, message);
   saveMessageToDevice(name, message); // Function to save message on user's device
-  //sendMessageToBestie(name, message);  Function to send message to your bestie
+  sendMessageToBestie(name, message);  //Function to send message to your bestie
   this.reset(); // Reset the form after submission
 });
 
@@ -64,7 +64,6 @@ function addMessage(name, message) {
   let li = document.createElement('li');
   li.innerHTML = `<strong>${name}:</strong> ${message}`;
   messageList.appendChild(li);
-  console.log(li);
 }
 
 // Function to save message on user's device (Using Local Storage)
@@ -78,4 +77,10 @@ function saveMessageToDevice(name, message) {
 /*function sendMessageToBestie(name, message) {
   console.log(`Message sent to bestie: ${name} - ${message}`);
   // Implement actual sending functionality using relevant APIs and services for each platform (Instagram, email, etc.)
+
 }*/
+// Function to send message to your bestie (Example using console.log)
+function sendMessageToBestie(name, message) {
+  console.log(`Message sent to bestie: ${name} - ${message}`);
+  alert('Message sent to Tiobiesta');
+}

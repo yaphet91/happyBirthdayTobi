@@ -430,7 +430,7 @@ video {
 
 
 @media screen and (min-width: 1200px) {
-  .heartfelt p, 
+  .a_box p, 
   .guestbook-form label {
     font-size: 1vw;
     padding: 0.2em;
