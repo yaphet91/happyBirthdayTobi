@@ -252,13 +252,82 @@
 .sub h1 {
   margin-bottom: 2%;
 }
+/*______Heartfelt Message*/
+.user-Delet {
+  padding: 1px 9px !important;
+  font-size: 1em;
+}
+.heartfelt p {
+  padding: 0.2em;
+  margin: 0;
+}
+.message {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for Digital Guestbook */
+.guestbook-section {
+  background: linear-gradient(#fd4a86 , #ff93b7 , #ffffff);
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.guestbook-form {
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
+.guestbook-form label,
+.guestbook-form input,
+.guestbook-form textarea {
+  margin-bottom: 10px;
+  width: 100%; 
+  display: block;
+  border-radius: 9px;
+  font-size: 1.7vw;
+
+}
+
+.guestbook-form button,
+.user-Delet{
+  background-color: #ff4791; /* Feminine color scheme */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.9);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.guestbook-form button:hover {
+  background-color: #ea74a3; /* Lighter shade for hover effect */
+}
+
+.guestbook-messages {
+  margin-top: 20px;
+}
+
+#messageList {
+  list-style: none;
+  padding: 0;
+}
+
+#messageList li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ff99bb; /* Feminine color scheme */
+  padding-bottom: 10px;
+}
 
 
-/*________sponsors*/
+/*______________sponsors________*/
 footer{
   text-align: center;
-  color: #F3D9D6;
-  background-color: #f90505;
+  color: #000000;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), #fd4a86);
   padding: 12px;
   font-style: italic;
   letter-spacing: 1px;
@@ -359,13 +428,22 @@ video {
   border: 1px solid #da0808; /* Add a border around the video */
 }
 
-.heartfelt p {
-  padding: 0.2em;
-  margin: 0;
+
+@media screen and (min-width: 1200px) {
+  .heartfelt p, 
+  .guestbook-form label {
+    font-size: 1vw;
+    padding: 0.2em;
+    margin: 0;
+  }
 }
-.message {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
+@media screen and (min-width: 1800px) {
+  .guestbook-form label,
+  .guestbook-form input,
+  .guestbook-form textarea {
+    font-size: 1vw;
+    padding: 0.2em;
+    margin: 0;
+  }
 }
