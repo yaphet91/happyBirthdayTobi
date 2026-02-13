@@ -1,4 +1,4 @@
-This project is a personalised birthday microsite built from r my bestie using HTML, CSS, and JavaScript. It begins with a countdown timer, followed by an animated unboxing sequence and balloon reveal effect.
+This project is a personalised birthday microsite built for my bestie using HTML, CSS, and JavaScript. It begins with a countdown timer, followed by an animated unboxing sequence and balloon reveal effect.
 
 The main page includes a photo gallery, interactive cards, and custom birthday messages.
 
